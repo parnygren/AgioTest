@@ -1,6 +1,7 @@
 ﻿using AgioTest.Models;
-using System.Web.Mvc;
 using AgioTest.ViewModels;
+using System.Net;
+using System.Web.Mvc;
 
 namespace AgioTest.Controllers
 {
@@ -42,11 +43,54 @@ namespace AgioTest.Controllers
         {
             Employee employee = _context.Employees.Find(id);
             if (employee == null)
-            {
                 return HttpNotFound();
-            }
 
             return View(employee);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Employee employee)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Entry(employee).State = System.Data.Entity.EntityState.Modified;
+                    _context.SaveChanges();
+
+                    return RedirectToAction("Index", "Home");
+                }
+                return View(employee);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            Employee employee = new Employee();
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if (id == null)
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+                    employee = _context.Employees.Find(id);
+                    if (employee == null) return HttpNotFound();
+
+                    _context.Employees.Remove(employee);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
+                return View(employee);
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }

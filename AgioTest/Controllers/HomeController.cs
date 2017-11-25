@@ -19,11 +19,8 @@ namespace AgioTest.Controllers
 
         public ActionResult Index()
         {
-            var model = new HomeIndexViewModel
-            {
-                Employees = _context.Employees.ToList()
-            };
-            return View(model);
+            var employees = _context.Employees.ToList();
+            return View(employees);
         }
 
         public ActionResult About()

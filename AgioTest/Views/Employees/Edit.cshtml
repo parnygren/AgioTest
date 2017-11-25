@@ -1,11 +1,11 @@
-﻿@model AgioTest.ViewModels.EmployeeFormViewModel
+﻿@model AgioTest.Models.Employee
 @{
-    ViewBag.Title = "Add an Employee";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Add an Employee</h2>
-@using (Html.BeginForm("Create", "Employees"))
+<h1>Edit @Model.FirstName @Model.LastName</h1>
+@using (Html.BeginForm("Edit", "Employees"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.FirstName)
@@ -29,5 +29,5 @@
     <button type="submit" class="btn btn-primary">Save</button>
 }@section scripts
  {
-     @Scripts.Render("~/bundles/jqueryval")
- }
+    @Scripts.Render("~/bundles/jqueryval")
+}

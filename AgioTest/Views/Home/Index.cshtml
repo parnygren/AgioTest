@@ -1,4 +1,4 @@
-﻿@model AgioTest.ViewModels.HomeIndexViewModel
+﻿@model IEnumerable<AgioTest.Models.Employee>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -6,22 +6,23 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>Firstname</th>
+            <th>FirstName</th>
             <th>LastName</th>
             <th>PersonalNumber</th>
             <th>EmployeeId</th>
             <th></th>
         </tr>
     </thead>
-    @foreach (var employee in Model.Employees)
+    @foreach (var employee in Model)
     {
-        <tr>            
+        <tr>
             <td>@employee.FirstName</td>
             <td>@employee.LastName</td>
             <td>@employee.PersonalNumber</td>
             <td>@employee.EmployeeNumber</td>
             <td>
-                <li>@Html.ActionLink("Edit", "", "Employees", new { id = employee.Id })</li>
+                @Html.ActionLink("Edit", "Edit", "Employees", new { id = employee.Id }, null) |
+                @Html.ActionLink("Delete", "Delete", "Employees", new { id = employee.Id }, null)
             </td>
         </tr>
     }

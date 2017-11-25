@@ -9,6 +9,8 @@ namespace AgioTest.ViewModels
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            if (value == null) return ValidationResult.Success;
+
             string RegExForValidation = @"^(?<date>\d{6}|\d{8})[-\s]?\d{4}$";
             string date = Regex.Match((string)value, RegExForValidation).Groups["date"].Value;
             DateTime dateTime;
