@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AgioTest.ViewModels
 {
@@ -15,7 +10,9 @@ namespace AgioTest.ViewModels
         [Required]
         public string LastName { get; set; }
 
+        [PersonalNumber]
         public string PersonalNumber { get; set; }
+
         public string EmployeeNumber { get; set; }
     }
 }
