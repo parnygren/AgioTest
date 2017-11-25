@@ -21,6 +21,9 @@ namespace AgioTest.Controllers
         [HttpPost]
         public ActionResult Create(EmployeeFormViewModel viewModel)
         {
+            if (!ModelState.IsValid)
+                return View("Create", viewModel);
+
             var employee = new Employee()
             {
                 FirstName = viewModel.FirstName,
