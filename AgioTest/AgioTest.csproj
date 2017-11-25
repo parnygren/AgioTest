@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201711250850522_OverrideConventionsForEmployees.Designer.cs">
       <DependentUpon>201711250850522_OverrideConventionsForEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711250857452_PopulateEmployeeTable.cs" />
+    <Compile Include="Migrations\201711250857452_PopulateEmployeeTable.Designer.cs">
+      <DependentUpon>201711250857452_PopulateEmployeeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -299,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711250850522_OverrideConventionsForEmployees.resx">
       <DependentUpon>201711250850522_OverrideConventionsForEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711250857452_PopulateEmployeeTable.resx">
+      <DependentUpon>201711250857452_PopulateEmployeeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
