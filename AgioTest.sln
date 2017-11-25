@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgioTest", "AgioTest\AgioTest.csproj", "{8B530A83-54EA-4ED5-B64C-FBB239815932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgioTest.Tests", "AgioTest.Tests\AgioTest.Tests.csproj", "{2330EEEA-F0E0-4763-9788-5AFBF846FDCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B530A83-54EA-4ED5-B64C-FBB239815932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B530A83-54EA-4ED5-B64C-FBB239815932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B530A83-54EA-4ED5-B64C-FBB239815932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B530A83-54EA-4ED5-B64C-FBB239815932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2330EEEA-F0E0-4763-9788-5AFBF846FDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2330EEEA-F0E0-4763-9788-5AFBF846FDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2330EEEA-F0E0-4763-9788-5AFBF846FDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2330EEEA-F0E0-4763-9788-5AFBF846FDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D83745B1-E89D-4C79-9158-1421F9573243}
+	EndGlobalSection
+EndGlobal
