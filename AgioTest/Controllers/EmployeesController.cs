@@ -37,5 +37,16 @@ namespace AgioTest.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public ActionResult Edit(int id = 0)
+        {
+            Employee employee = _context.Employees.Find(id);
+            if (employee == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(employee);
+        }
     }
 }

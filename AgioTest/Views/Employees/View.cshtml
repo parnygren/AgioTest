@@ -1,0 +1,57 @@
+﻿@model AgioTest.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Employee</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PersonalNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PersonalNumber)
+            @Html.ValidationMessageFor(model => model.PersonalNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmployeeNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmployeeNumber)
+            @Html.ValidationMessageFor(model => model.EmployeeNumber)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
